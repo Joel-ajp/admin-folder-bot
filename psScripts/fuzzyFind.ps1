@@ -9,7 +9,7 @@ function main() {
 
     # Sends an alert to the user if the folder name is ambigious or does not exist
     if ($null -eq $childFolder) {
-        Write-Output "The project '$tfParam' was ambigious or does not exist. Pleae input another project name. "
+        Write-Output "The project '$tfParam' was ambigious or does not exist. Pleae select **NO** and input another project name. "
         return
     } 
 
@@ -19,7 +19,7 @@ function main() {
 }
 
 # Gets all of the projects under the parent project
-$projectsUnderParent = Get-ChildItem "\\dfsdc.corp.rsquared.com\Survey\Projects\$pfParam" | Select-Object -ExpandProperty Name 
+$projectsUnderParent = Get-ChildItem "\\192.168.1.252\Survey\Projects\$pfParam" | Select-Object -ExpandProperty Name 
 
 function fuzzyFindChildProject([string]$userInput) {
     $count = 0

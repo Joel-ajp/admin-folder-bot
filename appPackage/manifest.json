@@ -1,55 +1,116 @@
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.16",
-    "version": "1.0.0",
-    "id": "${{TEAMS_APP_ID}}",
-    "packageName": "com.microsoft.teams.extension",
-    "developer": {
-        "name": "Teams App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/termofuse",
-        "termsOfUseUrl": "https://www.example.com/privacy"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "admin-folder-bot-${{TEAMSFX_ENV}}",
-        "full": "full name for admin-folder-bot"
-    },
-    "description": {
-        "short": "short description for admin-folder-bot",
-        "full": "full description for admin-folder-bot"
-    },
-    "accentColor": "#FFFFFF",
-    "bots": [
-        {
-            "botId": "${{BOT_ID}}",
-            "scopes": [
-                "personal",
-                "team",
-                "groupchat"
-            ],
-            "supportsFiles": false,
-            "isNotificationOnly": false,
-            "commandLists": [
-                {
-                    "scopes": [
-                        "personal",
-                        "team",
-                        "groupchat"
-                    ]
-                }
-            ]
-        }
-    ],
-    "composeExtensions": [],
-    "configurableTabs": [],
-    "staticTabs": [],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
-    "validDomains": []
+	"id": "08c13bca-3331-4376-93e1-59bc8e1e8dbf",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": 2,
+	"addIns": [],
+	"allowPublicClient": null,
+	"appId": "30a76627-e8c3-41f7-a382-4f305066411a",
+	"appRoles": [],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "2023-11-27T19:21:20Z",
+	"description": null,
+	"certification": null,
+	"disabledByMicrosoftStatus": null,
+	"groupMembershipClaims": null,
+	"identifierUris": [
+		"api://9569-104-182-18-241.ngrok-free.app/30a76627-e8c3-41f7-a382-4f305066411a"
+	],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "admin-folder-dfs",
+	"notes": null,
+	"oauth2AllowIdTokenImplicitFlow": true,
+	"oauth2AllowImplicitFlow": true,
+	"oauth2Permissions": [
+		{
+			"adminConsentDescription": "Allows Teams to call the app’s web APIs as the current user",
+			"adminConsentDisplayName": "Teams can access the user’s profile",
+			"id": "1389ec7f-6437-4fe2-b4b9-42e8d8bd4612",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"type": "User",
+			"userConsentDescription": "Enable Teams to call this app’s APIs with the same rights as the user",
+			"userConsentDisplayName": "Teams can access the user profile and make requests on the user’s behalf",
+			"value": "access_as_user"
+		}
+	],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [
+		{
+			"customKeyIdentifier": null,
+			"endDate": "2025-11-26T19:24:00.133Z",
+			"keyId": "956daaba-c0ed-4280-9414-b61451ecb8ad",
+			"startDate": "2023-11-27T19:24:00.133Z",
+			"value": null,
+			"createdOn": "2023-11-27T19:24:07.0276232Z",
+			"hint": "jxd",
+			"displayName": "testing"
+		},
+		{
+			"customKeyIdentifier": null,
+			"endDate": "2025-11-27T19:21:24.1053272Z",
+			"keyId": "5d98cc0e-daab-4190-92ee-ffaf93cb383f",
+			"startDate": "2023-11-27T19:21:24.1053272Z",
+			"value": null,
+			"createdOn": "2023-11-27T19:21:25.6393348Z",
+			"hint": "AAA",
+			"displayName": null
+		}
+	],
+	"preAuthorizedApplications": [
+		{
+			"appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
+			"permissionIds": [
+				"1389ec7f-6437-4fe2-b4b9-42e8d8bd4612"
+			]
+		},
+		{
+			"appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+			"permissionIds": [
+				"1389ec7f-6437-4fe2-b4b9-42e8d8bd4612"
+			]
+		}
+	],
+	"publisherDomain": "deltafieldservices.com",
+	"replyUrlsWithType": [
+		{
+			"url": "https://token.botframework.com/.auth/web/redirect",
+			"type": "Web"
+		},
+		{
+			"url": "https://9569-104-182-18-241.ngrok-free.app/auth-end",
+			"type": "Web"
+		}
+	],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "00000003-0000-0000-c000-000000000000",
+			"resourceAccess": [
+				{
+					"id": "df021288-bdef-4463-88db-98f22de89214",
+					"type": "Role"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": null,
+	"signInAudience": "AzureADandPersonalMicrosoftAccount",
+	"tags": [],
+	"tokenEncryptionKeyId": null
 }

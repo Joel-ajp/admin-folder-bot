@@ -6,15 +6,14 @@ $tfParam = $args[1]
 # This function assumes that the inputs are already valid
 function createAdminFolder([string]$targetFolder) {
     # Checks to see if there is already an Admin folder under the file path
-    if(test-path "S:\Projects\$pfParam\$targetFolder\Admin") {
+    if(test-path "\\192.168.1.252\Survey\Projects\$pfParam\$targetFolder\Admin") {
         Write-Output "Admin folder already exists in project '$targetFolder'"
         return
     }
         
-    if(test-path "S:\Projects\$pfParam\$targetFolder\") {
-        new-item "S:\$pfParam\$targetFolder\Admin" -ItemType Directory -Force
-        # robocopy *.* /V /S /E /COPYALL /ZB /NP /R:10 /W:10 "\\dfsdc.corp.rsquared.com\Survey\Projects\Current-Jobs\Folder setup\Admin" "\\dfsdc.corp.rsquared.com\Survey\Projects\$pfParam\$targetFolder\Admin" @filename /np /ts /fp /mir /sec /LOG:"results.log" 
-        robocopy *.* /V /S /E /COPYALL /ZB /NP /R:10 /W:10 "S:\Projects\Current-Jobs\Folder setup\Admin" "S:\Projects\$pfParam\$targetFolder\Admin" @filename /np /ts /fp /mir /sec /LOG:"results.log" 
+    if(test-path "\\192.168.1.252\Survey\Projects\$pfParam\$targetFolder\") {
+        new-item "\\192.168.1.252\Survey\Projects\$pfParam\$targetFolder\Admin" -ItemType Directory -Force
+        robocopy *.* /V /S /E /COPYALL /ZB /NP /R:10 /W:10 "\\192.168.1.252\Survey\Projects\Current-Jobs\Folder setup\Admin" "\\192.168.1.252\Survey\Projects\$pfParam\$targetFolder\Admin" @filename /np /ts /fp /mir /sec /LOG:"results.log" 
         Write-Output "Created an admin folder in the path S:\Projects\$pfParam\$targetFolder\"
         return
     } else {
@@ -24,7 +23,7 @@ function createAdminFolder([string]$targetFolder) {
 }
 
 # Gets all of the projects under the parent project
-$projectsUnderParent = Get-ChildItem "S:\Projects\$pfParam" | Select-Object -ExpandProperty Name 
+$projectsUnderParent = Get-ChildItem "\\192.168.1.252\Survey\Projects\$pfParam" | Select-Object -ExpandProperty Name
 
 function fuzzyFindChildProject([string]$userInput) {
     $count = 0
@@ -61,7 +60,7 @@ function main() {
     return
 }
 
-Write-Host "Attempting to create a folder in '$tfParam'"
+Write-Host "After attempting to create an admin folder in '$tfParam': "
 
 # Calls the main function with the user parameters
 main

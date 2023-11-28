@@ -136,7 +136,7 @@ class UserDialog extends ComponentDialog {
         step.values.folderInput = fuzzyFindOutput;
 
         return await step.prompt(CHOICE_PROMPT, {
-            prompt: `This is the path the admin folder will be created in: \n S:\\Projects\\${ step.values.parentProject }\\${ step.values.folderInput } \n Is this correct?`, 
+            prompt: `After searching for the project: \n ${ step.values.folderInput } \n`, 
             choices: ChoiceFactory.toChoices(["Yes", "No"]),
         });
     }

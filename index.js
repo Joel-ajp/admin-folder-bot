@@ -18,13 +18,11 @@ const {
 const { DialogBot } = require("./src/dialogBot");
 const { UserDialog } = require("./src/userDialog");
 
-const config = require("./config");
-
 // Create adapter.
 // See https://aka.ms/about-bot-adapter to learn more about adapters.
 const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
-  MicrosoftAppId: config.botId,
-  MicrosoftAppPassword: config.botPassword,
+  MicrosoftAppId: "BOT_ID (secret ID)",
+  MicrosoftAppPassword: "BOT_PASSWORD (secret key)",
   MicrosoftAppType: "MultiTenant",
 });
 
