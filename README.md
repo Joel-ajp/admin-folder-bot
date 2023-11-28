@@ -16,6 +16,7 @@ After changing the env variables to match your setup run the command
 ```
 npm run start
 ```
-to startup the bots endpoint: 
+to startup the bots endpoint.
+The admin folder bot will now be listening for incoming traffic on *localhost:3978* 
 
 **Congratulations**! 
