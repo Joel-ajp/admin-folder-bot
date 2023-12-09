@@ -8,8 +8,6 @@ A simple Teams bot that excecutes powershell commands on the server it is runnin
 
 > **Prerequisites**
 >
-> To run the Basic Bot template in your local dev machine, you will need:
->
 > - [Node.js](https://nodejs.org/), supported versions: 16, 18
 
 After changing the env variables to match your setup run the command 
