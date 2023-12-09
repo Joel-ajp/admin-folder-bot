@@ -16,6 +16,7 @@ const TEXT_PROMPT = 'TEXT_PROMPT';
 const WATERFALL_DIALOG = 'WATERFALL_DIALOG';
 
 const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 'Kinder Morgan', 'KINETIK', 'MARATHON', 'OXY'];
+// const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 'Kinder Morgan', 'KINETIK', 'MARATHON', 'OXY', 'CRA', 'Drill Site Consulting', 'Energy Transfer', 'Pinnacle', 'Silverback Exploration', 'Steward',];
 
 // This is a test function which takes two parameters. Should return a string similar to "Hello {first parameter} {second parameter}"
 async function helloParams(parentProject, folderInput) {
@@ -118,7 +119,7 @@ class UserDialog extends ComponentDialog {
     // To get the parent project
     async parentProjectStep(step) {
         return await step.prompt(CHOICE_PROMPT, {
-            prompt: "Please select the parent project from the list of choices.", 
+            prompt: "Please select the parent project from the cards below: ", 
             choices: ChoiceFactory.toChoices(PARENT_CHOICES),
         });
     }
