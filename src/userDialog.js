@@ -21,7 +21,7 @@ const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 
 async function helloParams(parentProject, folderInput) {
 
     // Formats the parameters to be passed into the powershell script
-    const formattedParam = parentProject + " " + folderInput;
+    const formattedParam = `\"${parentProject}\" \"${folderInput.trim()}\"`;
 
     // This excecutes a command (first text encapsulated by 's) in a shell (object with key 'shell' and value 'powershell.exe')
     const execOutput = await execSync('.\\psScripts\\helloParams.ps1 ' + formattedParam, { 'shell': 'powershell.exe' }, (error, stdout, stderr) => {
@@ -42,7 +42,7 @@ async function helloParams(parentProject, folderInput) {
 
 async function fuzzyFind(parentProject, folderInput) {
 
-    const formattedParam = parentProject + " " + folderInput.trim();
+    const formattedParam = `\"${parentProject}\" \"${folderInput.trim()}\"`;
 
     const execOutput = await execSync('.\\psScripts\\fuzzyFind.ps1 ' + formattedParam, { 'shell': 'powershell.exe' }, (error, stdout, stderr) => {
         // Handles the error
@@ -64,7 +64,7 @@ async function fuzzyFind(parentProject, folderInput) {
 async function createAdminFolder(parentProject, folderInput) {
 
     // Formats the parameters to be passed into the powershell script
-    const formattedParam = parentProject + " " + folderInput.trim();
+    const formattedParam = `\"${parentProject}\" \"${folderInput.trim()}\"`;
 
     // This excecutes a command (first text encapsulated by 's) in a shell (object with key 'shell' and value 'powershell.exe')
     const execOutput = await execSync('.\\psScripts\\paramsFolderCreation.ps1 ' + formattedParam, { 'shell': 'powershell.exe' }, (error, stdout, stderr) => {
