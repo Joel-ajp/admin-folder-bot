@@ -15,7 +15,7 @@ const CHOICE_PROMPT = 'CHOICE_PROMPT';
 const TEXT_PROMPT = 'TEXT_PROMPT';
 const WATERFALL_DIALOG = 'WATERFALL_DIALOG';
 
-const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 'Kinder Morgan', 'KINETIK', 'MARATHON', 'OXY', 'CRA', 'Drill Site Consulting', 'Energy Transfer', 'Pinnacle', 'Silverback Exploration', 'Steward',];
+const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 'Kinder Morgan', 'KINETIK', 'MARATHON', 'OXY', 'CRA', 'Drill Site Consulting', 'Energy Transfer', 'Pinnacle', 'Silverback Exploration', 'Steward', 'VOPAK'];
 
 // This is a test function which takes two parameters. Should return a string similar to "Hello {first parameter} {second parameter}"
 async function helloParams(parentProject, folderInput) {
@@ -181,3 +181,4 @@ class UserDialog extends ComponentDialog {
 }
 
 module.exports.UserDialog = UserDialog;
+
