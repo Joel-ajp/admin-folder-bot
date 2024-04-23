@@ -15,7 +15,8 @@ const CHOICE_PROMPT = 'CHOICE_PROMPT';
 const TEXT_PROMPT = 'TEXT_PROMPT';
 const WATERFALL_DIALOG = 'WATERFALL_DIALOG';
 
-const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 'Kinder Morgan', 'KINETIK', 'MARATHON', 'OXY', 'CRA', 'Drill Site Consulting', 'Energy Transfer', 'Pinnacle', 'Silverback Exploration', 'Steward', 'VOPAK'];
+// As new companies are added, you may add them to this list. This is used to display the parent project options to the user.
+const PARENT_CHOICES = ['Bayswater', 'BTA', 'Crestwood', 'Delek', 'Enterprise', 'Kinder Morgan', 'KINETIK', 'MARATHON', 'OXY', 'CRA', 'Drill Site Consulting', 'Energy Transfer', 'Pinnacle', 'Silverback Exploration', 'Steward', 'VOPAK', 'DFS'];
 
 // This is a test function which takes two parameters. Should return a string similar to "Hello {first parameter} {second parameter}"
 async function helloParams(parentProject, folderInput) {
